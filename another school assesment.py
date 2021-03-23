@@ -19,5 +19,13 @@ print("")
 
 for i in range(9999):
     if i == 456:
-      print(i)
+          a = str(i)
+          b = a.zfill(4)
+          print(b)
+
+print("")
+
+
+
+
 
