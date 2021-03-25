@@ -24,6 +24,30 @@ for i in range(9999):
           print(b)
 
 print("")
+x = 1
+y = 2
+z = 1
+n = int(input("What is your number"))
+while z <= n:
+    z += 1
+    y = 2
+    while y <= n:
+        if z * y == n:
+            x = 2
+        y = y + 1
+if n == 1:
+    x = 2
+if x == 2:
+    print("It is not a prime number")
+if x == 1:
+    print("It is a prime number")
+
+
+
+
+
+
+
 
 
 
