@@ -1,4 +1,4 @@
-user_1 = 10
+user_1 = 0
 user_2 = 0
 user_3 = 0
 user_4 = 0
@@ -14,8 +14,25 @@ user_13 = 0
 user_14 = 0
 user_15 = 0
 user_16 = 0
+credit_card_1 = 0
+credit_card_2 = 0
+credit_card_3 = 0
+credit_card_4 = 0
+credit_card_5 = 0
+credit_card_6 = 0
+credit_card_7 = 0
+credit_card_8 = 0
+credit_card_9 = 0
+credit_card_10 = 0
+credit_card_11 = 0
+credit_card_12 = 0
+credit_card_13 = 0
+credit_card_14 = 0
+credit_card_15 = 0
+credit_card_16 = 0
 name_list = ["Account_1", "Account_2", "Account_3", "Account_4", "Account_5", "Account_6", "Account_7", "Account_8", "Account_9", "Account_10", "Account_11", "Account_12", "Account_13", "Account_14", "Account_15", "Account_16"]
-def code():
+loop = 0
+while loop <1:
  account = input("Which account would you like to access? ")
  if account == "Account_1":
      code_1 = input("Please input the access code. ")
@@ -31,6 +48,17 @@ def code():
              user_1 += deposit_1
              print("{} has been added to your account".format(deposit_1))
              print("Your balance is ${}".format(user_1))
+         elif choice_1 == "borrow":
+             if credit_card_1 > 1:
+                 print("You cannot borrow money if you owe money to the bank.")
+                 pay_back_1 = input("would you like to pay it back?")
+
+             else:
+                 borrow_1 = int(input("How much would you like to borrow?"))
+                 user_1 += borrow_1
+                 credit_card_1 += borrow_1
+                 print("You now owe ${}".format(borrow_1))
+                 print("Your balance is ${}".format(user_1))
          else:
              print("Please enter a valid option.")
      else:
@@ -77,7 +105,7 @@ def code():
      if code_4 == "4567":
          choice_4 = input("would you like to withdraw, deposit, or borrow money? ")
          if choice_4 == "withdraw":
-             withdraw_3 = int(input("How much would you like to withdraw? "))
+             withdraw_4 = int(input("How much would you like to withdraw? "))
              user_4 -= withdraw_4
              print("{} has been deducted from your account".format(withdraw_4))
              print("Your balance is ${}".format(user_4))
@@ -306,4 +334,5 @@ def code():
              print("Please enter a valid option.")
      else:
          print("That code is incorrect.")
-code()
+ else:
+    print("Please enter a valid account.")
