@@ -42,11 +42,14 @@ try:
     n = 0
     while n < 1:
         name_list = ["Account_1", "Account_2", "Account_3", "Account_4", "Account_5", "Account_6", "Account_7", "Account_8", "Account_9", "Account_10", "Account_11", "Account_12", "Account_13", "Account_14", "Account_15", "Account_16"]
+        choice_list = ["withdraw", "deposit", "borrow", "gamble"]
+        print(name_list)
         account = input("Which account would you like to access? ")
         if account == "Account_1":
             code_1 = input("Please input the access code. ")
             if code_1 == "1234":
-                choice_1 = input("would you like to withdraw, deposit, borrow, or gamble? ")
+                print(choice_list)
+                choice_1 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_1 == "withdraw":
                     withdraw_1 = int(input("How much would you like to withdraw? "))
                     user_1 -= withdraw_1
@@ -98,6 +101,7 @@ try:
         elif account == "Account_2":
             code_2 = input("Please input the access code. ")
             if code_2 == "2345":
+                print(choice_list)
                 choice_2 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_2 == "withdraw":
                     withdraw_2 = int(input("How much would you like to withdraw? "))
@@ -125,6 +129,23 @@ try:
                         credit_card_2 += borrow_2
                         print("You now owe ${}".format(borrow_2))
                         print("Your balance is ${}".format(user_2))
+                elif choice_2 == "gamble":
+                    if user_2 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_2 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_2 == "yes":
+                            user_2 += 100
+                            credit_card_2 += 100
+                            print("Your balance is now {}".format(user_2))
+                    else:
+                        user_2 -= 100
+                        gamble_2 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_2:
+                            print("congratulations!")
+                            user_2 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -132,6 +153,7 @@ try:
         elif account == "Account_3":
             code_3 = input("Please input the access code. ")
             if code_3 == "3456":
+                print(choice_list)
                 choice_3 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_3 == "withdraw":
                     withdraw_3 = int(input("How much would you like to withdraw? "))
@@ -159,6 +181,23 @@ try:
                         credit_card_3 += borrow_3
                         print("You now owe ${}".format(borrow_3))
                         print("Your balance is ${}".format(user_3))
+                elif choice_3 == "gamble":
+                    if user_3 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_3 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_3 == "yes":
+                            user_3 += 100
+                            credit_card_3 += 100
+                            print("Your balance is now {}".format(user_3))
+                    else:
+                        user_3 -= 100
+                        gamble_3 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_3:
+                            print("congratulations!")
+                            user_3 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -166,6 +205,7 @@ try:
         elif account == "Account_4":
             code_4 = input("Please input the access code. ")
             if code_4 == "4567":
+                print(choice_list)
                 choice_4 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_4 == "withdraw":
                     withdraw_4 = int(input("How much would you like to withdraw? "))
@@ -193,6 +233,23 @@ try:
                         credit_card_4 += borrow_4
                         print("You now owe ${}".format(borrow_4))
                         print("Your balance is ${}".format(user_4))
+                elif choice_4 == "gamble":
+                    if user_4 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_ = input("Would you like to borrow some money? ")
+                        if gamble_borrow_ == "yes":
+                            user_4 += 100
+                            credit_card_4 += 100
+                            print("Your balance is now {}".format(user_4))
+                    else:
+                        user_4 -= 100
+                        gamble_4 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_4:
+                            print("congratulations!")
+                            user_4 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -200,6 +257,7 @@ try:
         elif account == "Account_5":
             code_5 = input("Please input the access code. ")
             if code_5 == "5678":
+                print(choice_list)
                 choice_5 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_5 == "withdraw":
                     withdraw_5 = int(input("How much would you like to withdraw? "))
@@ -227,6 +285,23 @@ try:
                         credit_card_5 += borrow_5
                         print("You now owe ${}".format(borrow_5))
                         print("Your balance is ${}".format(user_5))
+                elif choice_5 == "gamble":
+                    if user_5 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_5 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_5 == "yes":
+                            user_5 += 100
+                            credit_card_5 += 100
+                            print("Your balance is now {}".format(user_5))
+                    else:
+                        user_5 -= 100
+                        gamble_5 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_5:
+                            print("congratulations!")
+                            user_5 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -234,6 +309,7 @@ try:
         elif account == "Account_6":
             code_6 = input("Please input the access code. ")
             if code_6 == "6789":
+                print(choice_list)
                 choice_6 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_6 == "withdraw":
                     withdraw_6 = int(input("How much would you like to withdraw? "))
@@ -261,11 +337,29 @@ try:
                         credit_card_6 += borrow_6
                         print("You now owe ${}".format(borrow_6))
                         print("Your balance is ${}".format(user_6))
+                elif choice_6 == "gamble":
+                    if user_6 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_6 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_6 == "yes":
+                            user_6 += 100
+                            credit_card_6 += 100
+                            print("Your balance is now {}".format(user_6))
+                    else:
+                        user_6 -= 100
+                        gamble_6 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_6:
+                            print("congratulations!")
+                            user_6 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_7":
+            print(choice_list)
             code_7 = input("Please input the access code. ")
             if code_7 == "7891":
                 choice_7 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -295,11 +389,29 @@ try:
                         credit_card_7 += borrow_7
                         print("You now owe ${}".format(borrow_7))
                         print("Your balance is ${}".format(user_7))
+                elif choice_7 == "gamble":
+                    if user_7 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_7 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_7 == "yes":
+                            user_7 += 100
+                            credit_card_7 += 100
+                            print("Your balance is now {}".format(user_7))
+                    else:
+                        user_7 -= 100
+                        gamble_7 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_7:
+                            print("congratulations!")
+                            user_7 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_8":
+            print(choice_list)
             code_8 = input("Please input the access code. ")
             if code_8 == "8910":
                 choice_8 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -329,6 +441,23 @@ try:
                         credit_card_8 += borrow_8
                         print("You now owe ${}".format(borrow_8))
                         print("Your balance is ${}".format(user_8))
+                elif choice_8 == "gamble":
+                    if user_8 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_8 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_8 == "yes":
+                            user_8 += 100
+                            credit_card_8 += 100
+                            print("Your balance is now {}".format(user_8))
+                    else:
+                        user_8 -= 100
+                        gamble_8 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_8:
+                            print("congratulations!")
+                            user_8 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -336,6 +465,7 @@ try:
         elif account == "Account_9":
             code_9 = input("Please input the access code. ")
             if code_9 == "9101":
+                print(choice_list)
                 choice_9 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_9 == "withdraw":
                     withdraw_9 = int(input("How much would you like to withdraw? "))
@@ -363,11 +493,29 @@ try:
                         credit_card_9 += borrow_9
                         print("You now owe ${}".format(borrow_9))
                         print("Your balance is ${}".format(user_9))
+                elif choice_9 == "gamble":
+                    if user_9 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_9 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_9 == "yes":
+                            user_9 += 100
+                            credit_card_9 += 100
+                            print("Your balance is now {}".format(user_9))
+                    else:
+                        user_9 -= 100
+                        gamble_9 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_9:
+                            print("congratulations!")
+                            user_9 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_10":
+            print(choice_list)
             code_10 = input("Please input the access code. ")
             if code_10 == "1011":
                 choice_10 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -397,11 +545,29 @@ try:
                         credit_card_10 += borrow_10
                         print("You now owe ${}".format(borrow_10))
                         print("Your balance is ${}".format(user_10))
+                elif choice_10 == "gamble":
+                    if user_10 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_10 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_10 == "yes":
+                            user_10 += 100
+                            credit_card_10 += 100
+                            print("Your balance is now {}".format(user_10))
+                    else:
+                        user_10 -= 100
+                        gamble_10 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_10:
+                            print("congratulations!")
+                            user_10 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_11":
+            print(choice_list)
             code_11 = input("Please input the access code. ")
             if code_11 == "1112":
                 choice_11 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -431,11 +597,29 @@ try:
                         credit_card_11 += borrow_11
                         print("You now owe ${}".format(borrow_11))
                         print("Your balance is ${}".format(user_11))
+                elif choice_11 == "gamble":
+                    if user_11 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_11 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_11 == "yes":
+                            user_11 += 100
+                            credit_card_11 += 100
+                            print("Your balance is now {}".format(user_11))
+                    else:
+                        user_11 -= 100
+                        gamble_11 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_11:
+                            print("congratulations!")
+                            user_11 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_12":
+            print(choice_list)
             code_12 = input("Please input the access code. ")
             if code_12 == "1213":
                 choice_12 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -465,11 +649,29 @@ try:
                         credit_card_12 += borrow_12
                         print("You now owe ${}".format(borrow_12))
                         print("Your balance is ${}".format(user_12))
+                elif choice_12 == "gamble":
+                    if user_12 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_12 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_12 == "yes":
+                            user_12 += 100
+                            credit_card_12 += 100
+                            print("Your balance is now {}".format(user_12))
+                    else:
+                        user_12 -= 100
+                        gamble_12 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_12:
+                            print("congratulations!")
+                            user_12 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_13":
+            print(choice_list)
             code_13 = input("Please input the access code. ")
             if code_13 == "1314":
                 choice_13 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -499,11 +701,29 @@ try:
                         credit_card_13 += borrow_13
                         print("You now owe ${}".format(borrow_13))
                         print("Your balance is ${}".format(user_13))
+                elif choice_13 == "gamble":
+                    if user_13 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_13 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_13 == "yes":
+                            user_13 += 100
+                            credit_card_13 += 100
+                            print("Your balance is now {}".format(user_13))
+                    else:
+                        user_13 -= 100
+                        gamble_13 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_13:
+                            print("congratulations!")
+                            user_13 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_14":
+            print(choice_list)
             code_14 = input("Please input the access code. ")
             if code_14 == "1415":
                 choice_14 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -533,11 +753,29 @@ try:
                         credit_card_14 += borrow_14
                         print("You now owe ${}".format(borrow_14))
                         print("Your balance is ${}".format(user_14))
+                elif choice_14 == "gamble":
+                    if user_14 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_14 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_14 == "yes":
+                            user_14 += 100
+                            credit_card_14 += 100
+                            print("Your balance is now {}".format(user_14))
+                    else:
+                        user_14 -= 100
+                        gamble_14 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_14:
+                            print("congratulations!")
+                            user_14 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
                 print("That code is incorrect.")
         elif account == "Account_15":
+            print(choice_list)
             code_15 = input("Please input the access code. ")
             if code_15 == "1516":
                 choice_15 = input("would you like to withdraw, deposit, or borrow money? ")
@@ -567,6 +805,23 @@ try:
                         credit_card_15 += borrow_15
                         print("You now owe ${}".format(borrow_15))
                         print("Your balance is ${}".format(user_15))
+                elif choice_15 == "gamble":
+                    if user_15 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_15 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_15 == "yes":
+                            user_15 += 100
+                            credit_card_15 += 100
+                            print("Your balance is now {}".format(user_15))
+                    else:
+                        user_15 -= 100
+                        gamble_15 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_15:
+                            print("congratulations!")
+                            user_15 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
@@ -574,6 +829,7 @@ try:
         elif account == "Account_16":
             code_16 = input("Please input the access code. ")
             if code_16 == "1617":
+                print(choice_list)
                 choice_16 = input("would you like to withdraw, deposit, or borrow money? ")
                 if choice_16 == "withdraw":
                     withdraw_16 = int(input("How much would you like to withdraw? "))
@@ -601,6 +857,23 @@ try:
                         credit_card_16 += borrow_16
                         print("You now owe ${}".format(borrow_16))
                         print("Your balance is ${}".format(user_16))
+                elif choice_16 == "gamble":
+                    if user_16 < 100:
+                        print("You don't have enough money.")
+                        gamble_borrow_16 = input("Would you like to borrow some money? ")
+                        if gamble_borrow_16 == "yes":
+                            user_16 += 100
+                            credit_card_16 += 100
+                            print("Your balance is now {}".format(user_16))
+                    else:
+                        user_16 -= 100
+                        gamble_16 = int(input("What do you think the number will be? "))
+                        lotto = lottery()
+                        if lotto == gamble_16:
+                            print("congratulations!")
+                            user_16 += 1000000
+                        else:
+                            print("Did you really think you were going to win it?")
                 else:
                     print("Please enter a valid option.")
             else:
