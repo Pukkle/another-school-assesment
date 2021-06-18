@@ -1,5 +1,5 @@
 import random
-
+# The lottery
 def lottery():
     loot = random.randint(1, 4000000)
     print("The lottery number was {}".format(loot))
@@ -7,6 +7,7 @@ def lottery():
 
 
 try:
+    # Accounts
     user_1 = 0
     user_2 = 0
     user_3 = 0
@@ -23,6 +24,7 @@ try:
     user_14 = 0
     user_15 = 0
     user_16 = 0
+    # What they owe to the "bank"
     credit_card_1 = 0
     credit_card_2 = 0
     credit_card_3 = 0
@@ -39,44 +41,54 @@ try:
     credit_card_14 = 0
     credit_card_15 = 0
     credit_card_16 = 0
+    # This loops the code indefinitely
     n = 0
     while n < 1:
+        # The list of accounts
         name_list = ["Account_1", "Account_2", "Account_3", "Account_4", "Account_5", "Account_6", "Account_7", "Account_8", "Account_9", "Account_10", "Account_11", "Account_12", "Account_13", "Account_14", "Account_15", "Account_16"]
+        # The list of options
         choice_list = ["withdraw", "deposit", "borrow", "gamble"]
         print(name_list)
         account = input("Which account would you like to access? ")
         if account == "Account_1":
+            # Security so the students can't access each others accounts
             code_1 = input("Please input the access code. ")
             if code_1 == "1234":
-                print(choice_list)
-                choice_1 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_1 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_1 == "withdraw":
+                    # Takes money from account
                     withdraw_1 = int(input("How much would you like to withdraw? "))
                     user_1 -= withdraw_1
                     print("{} has been deducted from your account".format(withdraw_1))
                     print("Your balance is ${}".format(user_1))
                 elif choice_1 == "deposit":
+                    # Puts money into account
                     deposit_1 = int(input("How much would you like to deposit? "))
                     user_1 += deposit_1
                     print("{} has been added to your account".format(deposit_1))
                     print("Your balance is ${}".format(user_1))
                 elif choice_1 == "borrow":
+                    # Asks user if they would like to pay back what they owe
                     if credit_card_1 > 0:
                         print("You cannot borrow money if you owe money to the bank.")
                         payback_1 = input("would you like to pay it back?")
                         if payback_1 == "yes":
+                            # With 10% increase
                             user_1 -= (credit_card_1 * 1.1)
                             print("{} has been deducted from your account".format(credit_card_1 * 1.1))
                             print("Your balance is ${}".format(user_1))
                         else:
                             print("Okay, but keep in mind you're going to have to pay it back sometime.")
                     else:
+                        # Borrows money from bank that they have to pay back
                         borrow_1 = int(input("How much would you like to borrow?"))
                         user_1 += borrow_1
                         credit_card_1 += borrow_1
                         print("You now owe ${}".format(borrow_1))
                         print("Your balance is ${}".format(user_1))
                 elif choice_1 == "gamble":
+                    # Gives user option to borrow for the lottery
                     if user_1 < 100:
                         print("You don't have enough money.")
                         gamble_borrow_1 = input("Would you like to borrow some money? ")
@@ -85,6 +97,7 @@ try:
                             credit_card_1 += 100
                             print("Your balance is now {}".format(user_1))
                     else:
+                        # The user gambles in the lottery
                         user_1 -= 100
                         gamble_1 = int(input("What do you think the number will be? "))
                         lotto = lottery()
@@ -99,10 +112,11 @@ try:
                 print("That code is incorrect.")
 
         elif account == "Account_2":
+            # This portion does the exact same as the first section but for the second account
             code_2 = input("Please input the access code. ")
             if code_2 == "2345":
-                print(choice_list)
-                choice_2 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_2 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_2 == "withdraw":
                     withdraw_2 = int(input("How much would you like to withdraw? "))
                     user_2 -= withdraw_2
@@ -151,10 +165,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_3":
+            # This portion does the exact same as the first section but for the third account
             code_3 = input("Please input the access code. ")
             if code_3 == "3456":
-                print(choice_list)
-                choice_3 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_3 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_3 == "withdraw":
                     withdraw_3 = int(input("How much would you like to withdraw? "))
                     user_3 -= withdraw_3
@@ -203,10 +218,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_4":
+            # This portion does the exact same as the first section but for the forth account
             code_4 = input("Please input the access code. ")
             if code_4 == "4567":
-                print(choice_list)
-                choice_4 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_4 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_4 == "withdraw":
                     withdraw_4 = int(input("How much would you like to withdraw? "))
                     user_4 -= withdraw_4
@@ -255,10 +271,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_5":
+            # This portion does the exact same as the first section but for the fifth account
             code_5 = input("Please input the access code. ")
             if code_5 == "5678":
-                print(choice_list)
-                choice_5 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_5 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_5 == "withdraw":
                     withdraw_5 = int(input("How much would you like to withdraw? "))
                     user_5 -= withdraw_5
@@ -307,10 +324,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_6":
+            # This portion does the exact same as the first section but for the sixth account
             code_6 = input("Please input the access code. ")
             if code_6 == "6789":
-                print(choice_list)
-                choice_6 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_6 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_6 == "withdraw":
                     withdraw_6 = int(input("How much would you like to withdraw? "))
                     user_6 -= withdraw_6
@@ -359,10 +377,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_7":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the seventh account
+            print("Options: {}".format(choice_list))
             code_7 = input("Please input the access code. ")
             if code_7 == "7891":
-                choice_7 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_7 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_7 == "withdraw":
                     withdraw_7 = int(input("How much would you like to withdraw? "))
                     user_7 -= withdraw_7
@@ -411,10 +430,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_8":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the eighth account
+            print("Options: {}".format(choice_list))
             code_8 = input("Please input the access code. ")
             if code_8 == "8910":
-                choice_8 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_8 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_8 == "withdraw":
                     withdraw_8 = int(input("How much would you like to withdraw? "))
                     user_8 -= withdraw_8
@@ -463,10 +483,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_9":
+            # This portion does the exact same as the first section but for the ninth account
             code_9 = input("Please input the access code. ")
             if code_9 == "9101":
-                print(choice_list)
-                choice_9 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_9 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_9 == "withdraw":
                     withdraw_9 = int(input("How much would you like to withdraw? "))
                     user_9 -= withdraw_9
@@ -515,10 +536,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_10":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the tenth account
+            print("Options: {}".format(choice_list))
             code_10 = input("Please input the access code. ")
             if code_10 == "1011":
-                choice_10 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_10 = input("Would you like to withdraw, deposit, borrow or gamble? ")
                 if choice_10 == "withdraw":
                     withdraw_10 = int(input("How much would you like to withdraw? "))
                     user_10 -= withdraw_10
@@ -567,10 +589,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_11":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the eleventh account
+            print("Options: {}".format(choice_list))
             code_11 = input("Please input the access code. ")
             if code_11 == "1112":
-                choice_11 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_11 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_11 == "withdraw":
                     withdraw_11 = int(input("How much would you like to withdraw? "))
                     user_11 -= withdraw_11
@@ -619,10 +642,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_12":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the twelfth account
+            print("Options: {}".format(choice_list))
             code_12 = input("Please input the access code. ")
             if code_12 == "1213":
-                choice_12 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_12 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_12 == "withdraw":
                     withdraw_12 = int(input("How much would you like to withdraw? "))
                     user_12 -= withdraw_12
@@ -671,10 +695,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_13":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the thirteenth account
+            print("Options: {}".format(choice_list))
             code_13 = input("Please input the access code. ")
             if code_13 == "1314":
-                choice_13 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_13 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_13 == "withdraw":
                     withdraw_13 = int(input("How much would you like to withdraw? "))
                     user_13 -= withdraw_13
@@ -723,10 +748,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_14":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the fourteenth account
+            print("Options: {}".format(choice_list))
             code_14 = input("Please input the access code. ")
             if code_14 == "1415":
-                choice_14 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_14 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_14 == "withdraw":
                     withdraw_14 = int(input("How much would you like to withdraw? "))
                     user_14 -= withdraw_14
@@ -775,10 +801,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_15":
-            print(choice_list)
+            # This portion does the exact same as the first section but for the fifteenth account
+            print("Options: {}".format(choice_list))
             code_15 = input("Please input the access code. ")
             if code_15 == "1516":
-                choice_15 = input("would you like to withdraw, deposit, or borrow money? ")
+                choice_15 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_15 == "withdraw":
                     withdraw_15 = int(input("How much would you like to withdraw? "))
                     user_15 -= withdraw_15
@@ -827,10 +854,11 @@ try:
             else:
                 print("That code is incorrect.")
         elif account == "Account_16":
+            # This portion does the exact same as the first section but for the sixteenth account
             code_16 = input("Please input the access code. ")
             if code_16 == "1617":
-                print(choice_list)
-                choice_16 = input("would you like to withdraw, deposit, or borrow money? ")
+                print("Options: {}".format(choice_list))
+                choice_16 = input("Would you like to withdraw, deposit, borrow, or gamble? ")
                 if choice_16 == "withdraw":
                     withdraw_16 = int(input("How much would you like to withdraw? "))
                     user_16 -= withdraw_16
